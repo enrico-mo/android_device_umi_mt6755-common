@@ -63,6 +63,7 @@ MTK_HWC_VERSION := 1.4.1
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.mt6755
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -115,7 +116,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/umi/MAX/ril
+BOARD_RIL_CLASS := ../../../device/umi/mt6755-common/ril
 BOARD_CONNECTIVITY_MODULE := conn_soc
 
 # Selinux

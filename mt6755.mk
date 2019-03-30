@@ -34,11 +34,75 @@ PRODUCT_PACKAGES += \
     audio_policy.default \
     libaudio-resampler \
     libaudiopolicymanagerdefault \
-    libmtk_symbols \
     libtinycompress \
     libtinyxml \
-    tinymix \
-    libtinyalsa
+    tinymix
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/audio_param/AudioParamOptions.xml:system/etc/audio_param/AudioParamOptions.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackACF_AudioParam.xml:system/etc/audio_param/PlaybackACF_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackACF_ParamUnitDesc.xml:system/etc/audio_param/PlaybackACF_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackDRC_AudioParam.xml:system/etc/audio_param/PlaybackDRC_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackDRC_ParamUnitDesc.xml:system/etc/audio_param/PlaybackDRC_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackHCF_AudioParam.xml:system/etc/audio_param/PlaybackHCF_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackHCF_ParamUnitDesc.xml:system/etc/audio_param/PlaybackHCF_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackVolAna_AudioParam.xml:system/etc/audio_param/PlaybackVolAna_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackVolAna_ParamUnitDesc.xml:system/etc/audio_param/PlaybackVolAna_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackVolDigi_AudioParam.xml:system/etc/audio_param/PlaybackVolDigi_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackVolDigi_ParamUnitDesc.xml:system/etc/audio_param/PlaybackVolDigi_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackVolUI_AudioParam.xml:system/etc/audio_param/PlaybackVolUI_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/PlaybackVolUI_ParamUnitDesc.xml:system/etc/audio_param/PlaybackVolUI_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Playback_AudioParam.xml:system/etc/audio_param/Playback_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Playback_ParamTreeView.xml:system/etc/audio_param/Playback_ParamTreeView.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Playback_ParamUnitDesc.xml:system/etc/audio_param/Playback_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordDMNR_AudioParam.xml:system/etc/audio_param/RecordDMNR_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordDMNR_ParamUnitDesc.xml:system/etc/audio_param/RecordDMNR_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordFIR_AudioParam.xml:system/etc/audio_param/RecordFIR_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordFIR_ParamUnitDesc.xml:system/etc/audio_param/RecordFIR_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordUI_AudioParam.xml:system/etc/audio_param/RecordUI_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordUI_ParamUnitDesc.xml:system/etc/audio_param/RecordUI_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordVolUI_AudioParam.xml:system/etc/audio_param/RecordVolUI_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordVolUI_ParamUnitDesc.xml:system/etc/audio_param/RecordVolUI_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordVol_AudioParam.xml:system/etc/audio_param/RecordVol_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/RecordVol_ParamUnitDesc.xml:system/etc/audio_param/RecordVol_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Record_AudioParam.xml:system/etc/audio_param/Record_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Record_ParamTreeView.xml:system/etc/audio_param/Record_ParamTreeView.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Record_ParamUnitDesc.xml:system/etc/audio_param/Record_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechDMNR_AudioParam.xml:system/etc/audio_param/SpeechDMNR_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechDMNR_ParamUnitDesc.xml:system/etc/audio_param/SpeechDMNR_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechGeneral_AudioParam.xml:system/etc/audio_param/SpeechGeneral_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechGeneral_ParamUnitDesc.xml:system/etc/audio_param/SpeechGeneral_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechMagiClarity_AudioParam.xml:system/etc/audio_param/SpeechMagiClarity_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechMagiClarity_ParamUnitDesc.xml:system/etc/audio_param/SpeechMagiClarity_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechUI_AudioParam.xml:system/etc/audio_param/SpeechUI_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechUI_ParamUnitDesc.xml:system/etc/audio_param/SpeechUI_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechVolUI_AudioParam.xml:system/etc/audio_param/SpeechVolUI_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechVolUI_ParamUnitDesc.xml:system/etc/audio_param/SpeechVolUI_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechVol_AudioParam.xml:system/etc/audio_param/SpeechVol_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/SpeechVol_ParamUnitDesc.xml:system/etc/audio_param/SpeechVol_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Speech_AudioParam.xml:system/etc/audio_param/Speech_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Speech_ParamTreeView.xml:system/etc/audio_param/Speech_ParamTreeView.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Speech_ParamUnitDesc.xml:system/etc/audio_param/Speech_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPDMNR_AudioParam.xml:system/etc/audio_param/VoIPDMNR_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPDMNR_ParamUnitDesc.xml:system/etc/audio_param/VoIPDMNR_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPGeneral_AudioParam.xml:system/etc/audio_param/VoIPGeneral_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPGeneral_ParamUnitDesc.xml:system/etc/audio_param/VoIPGeneral_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPUI_AudioParam.xml:system/etc/audio_param/VoIPUI_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPUI_ParamUnitDesc.xml:system/etc/audio_param/VoIPUI_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPVolUI_AudioParam.xml:system/etc/audio_param/VoIPVolUI_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPVolUI_ParamUnitDesc.xml:system/etc/audio_param/VoIPVolUI_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPVol_AudioParam.xml:system/etc/audio_param/VoIPVol_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIPVol_ParamUnitDesc.xml:system/etc/audio_param/VoIPVol_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIP_AudioParam.xml:system/etc/audio_param/VoIP_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIP_ParamTreeView.xml:system/etc/audio_param/VoIP_ParamTreeView.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VoIP_ParamUnitDesc.xml:system/etc/audio_param/VoIP_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VolumeGainMap_AudioParam.xml:system/etc/audio_param/VolumeGainMap_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/VolumeGainMap_ParamUnitDesc.xml:system/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Volume_AudioParam.xml:system/etc/audio_param/Volume_AudioParam.xml \
+    $(LOCAL_PATH)/configs/audio/audio_param/Volume_ParamUnitDesc.xml:system/etc/audio_param/Volume_ParamUnitDesc.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
+    $(LOCAL_PATH)/configs/audio/audio_em.xml:system/etc/audio_em.xml
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
@@ -85,6 +149,15 @@ PRODUCT_COPY_FILES += \
 # FMRadio
 PRODUCT_PACKAGES += \
 	FMRadio
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/fmr/mt6627_fm_cust.cfg:system/etc/fmr/mt6627_fm_cust.cfg \
+	$(LOCAL_PATH)/prebuilt/fm/lib/libfmcust.so:system/lib/libfmcust.so \
+	$(LOCAL_PATH)/prebuilt/fm/lib/libfmjni.so:system/lib/libfmjni.so \
+	$(LOCAL_PATH)/prebuilt/fm/lib64/libfmcust.so:system/lib64/libfmcust.so \
+	$(LOCAL_PATH)/prebuilt/fm/lib64/libfmjni.so:system/lib64/libfmjni.so \
+	$(LOCAL_PATH)/prebuilt/fm/lib64/libfmjniem.so:system/lib64/libfmjniem.so \
+	$(LOCAL_PATH)/prebuilt/fm/lib64/libmtkplayer.so:system/lib64/libmtkplayer.so
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -209,6 +282,23 @@ PRODUCT_COPY_FILES += \
 SIM_COUNT := 2
 PRODUCT_PROPERTY_OVERRIDES += ro.telephony.sim.count=$(SIM_COUNT)
 
+# Thermal profiles
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/.tp/.ht120.mtc:system/etc/.tp/.ht120.mtc \
+	$(LOCAL_PATH)/configs/.tp/.thermal_meta.conf:system/etc/.tp/.thermal_meta.conf \
+	$(LOCAL_PATH)/configs/.tp/.thermal_policy_00:system/etc/.tp/.thermal_policy_00 \
+	$(LOCAL_PATH)/configs/.tp/.thermal_policy_01:system/etc/.tp/.thermal_policy_01 \
+	$(LOCAL_PATH)/configs/.tp/.thermal_policy_02:system/etc/.tp/.thermal_policy_02 \
+	$(LOCAL_PATH)/configs/.tp/thermal.conf:system/etc/.tp/thermal.conf \
+	$(LOCAL_PATH)/configs/.tp/thermal.high.conf:system/etc/.tp/thermal.high.conf \
+	$(LOCAL_PATH)/configs/.tp/thermal.low.conf:system/etc/.tp/thermal.low.conf \
+	$(LOCAL_PATH)/configs/.tp/thermal.mid.conf:system/etc/.tp/thermal.mid.conf \
+	$(LOCAL_PATH)/configs/.tp/thermal.off.conf:system/etc/.tp/thermal.off.conf \
+	$(LOCAL_PATH)/prebuilt/.tp/bin/thermal:system/bin/thermal \
+	$(LOCAL_PATH)/prebuilt/.tp/bin/thermal_manager:system/bin/thermal_manager \
+	$(LOCAL_PATH)/prebuilt/.tp/bin/thermald:system/bin/thermald \
+	$(LOCAL_PATH)/prebuilt/.tp/bin/thermalloadalgod:system/bin/thermalloadalgod
+
 # USB
 PRODUCT_PACKAGES += \
 	librs_jni \
@@ -232,11 +322,14 @@ PRODUCT_PACKAGES += \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-	$(LOCAL_PATH)/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
-	$(LOCAL_PATH)/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
-	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-	frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
+    $(LOCAL_PATH)/configs/hostapd/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/configs/hostapd/hostapd.deny:system/etc/hostapd/hostapd.deny \
+    $(LOCAL_PATH)/configs/hostapd/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
 #############################################################################################################################
 
