@@ -26,7 +26,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # FSTAB
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/rootdir/etc/fstab.mt6755:root/fstab.mt6755
 
-# Audio
+# Audio - REMOVED FROM PRODUCT COPY FILES: $(LOCAL_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
@@ -195,11 +195,11 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-# Keyboard layout
+# Keyboard layout (REMOVED: $(LOCAL_PATH)/configs/keylayout/Generic.kl:system/usr/keylayout/Generic.kl)
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
 	$(LOCAL_PATH)/configs/keylayout/ACCDET.kl:system/usr/keylayout/ACCDET.kl \
-	$(LOCAL_PATH)/configs/keylayout/Generic.kl:system/usr/keylayout/Generic.kl
+        $(LOCAL_PATH)/configs/keylayout/mtk-tpd.kl:system/usr/keylayout/mtk-tpd.kl
 
 # Keyhandler
 PRODUCT_PACKAGES += com.cyanogenmod.keyhandler
@@ -221,8 +221,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml \
 	$(LOCAL_PATH)/configs/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
 	$(LOCAL_PATH)/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg \
-	$(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-	$(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf \
 	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Power
@@ -259,6 +257,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.ril_class=MT6755 \
 	ro.telephony.ril.config=fakeiccid
 
+# RIL Proprietary
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/ril/bin/gsm0710muxd:system/bin/gsm0710muxd \
+    $(LOCAL_PATH)/prebuilt/ril/bin/gsm0710muxdmd2:system/bin/gsm0710muxdmd2 \
+    $(LOCAL_PATH)/prebuilt/ril/bin/mtkrild:system/bin/mtkrild \
+    $(LOCAL_PATH)/prebuilt/ril/bin/mtkrildmd2:system/bin/mtkrildmd2 \
+    $(LOCAL_PATH)/prebuilt/ril/lib/libmal.so:system/lib/libmal.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib/libmdfx.so:system/lib/libmdfx.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib/librilmtk.so:system/lib/librilmtk.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib/librilmtkmd2.so:system/lib/librilmtkmd2.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib/mtk-ril.so:system/lib/mtk-ril.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib/mtk-rilmd2.so:system/lib/mtk-rilmd2.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib64/libmal.so:system/lib64/libmal.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib64/libmdfx.so:system/lib64/libmdfx.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib64/librilmtk.so:system/lib64/librilmtk.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib64/librilmtkmd2.so:system/lib64/librilmtkmd2.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib64/mtk-ril.so:system/lib64/mtk-ril.so \
+    $(LOCAL_PATH)/prebuilt/ril/lib64/mtk-rilmd2.so:system/lib64/mtk-rilmd2.so
+
 # Sensors
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
@@ -290,9 +307,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/.tp/.thermal_policy_01:system/etc/.tp/.thermal_policy_01 \
 	$(LOCAL_PATH)/configs/.tp/.thermal_policy_02:system/etc/.tp/.thermal_policy_02 \
 	$(LOCAL_PATH)/configs/.tp/thermal.conf:system/etc/.tp/thermal.conf \
-	$(LOCAL_PATH)/configs/.tp/thermal.high.conf:system/etc/.tp/thermal.high.conf \
-	$(LOCAL_PATH)/configs/.tp/thermal.low.conf:system/etc/.tp/thermal.low.conf \
-	$(LOCAL_PATH)/configs/.tp/thermal.mid.conf:system/etc/.tp/thermal.mid.conf \
 	$(LOCAL_PATH)/configs/.tp/thermal.off.conf:system/etc/.tp/thermal.off.conf \
 	$(LOCAL_PATH)/prebuilt/.tp/bin/thermal:system/bin/thermal \
 	$(LOCAL_PATH)/prebuilt/.tp/bin/thermal_manager:system/bin/thermal_manager \
