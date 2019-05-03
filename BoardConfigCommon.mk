@@ -21,7 +21,7 @@ LOCAL_PATH := device/umi/mt6755-common
 # Common board elements
 include $(LOCAL_PATH)/PlatformConfig.mk
 
-ifneq ($(TARGET_BUILD_VARIANT), user)
+ifneq ($(TARGET_BUILD_VARIANT), userdebug)
 # ADB Debugging
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
